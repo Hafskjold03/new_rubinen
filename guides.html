@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubinen - Guides</title>
+    <link rel="stylesheet" href="guides.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="bilder/rubinen_logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="server_info.html">Server Info</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="https://rubinen.craftingstore.net/">Nettbutikk</a></li>
+                <li><a href="om_oss.html">Om oss</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <!-- Forskjellige guides: -->
+    <div class="container">
+        <!-- Claims -->
+        <section>
+            <img src="skjermbilder/2024-06-15_10.28.02.png" alt="claim">
+            <div class="section-content">
+                <h2>Claims</h2>
+                <p>For å hindre andre i å ødelegge, kan du claime det du har laget. Du kan styre hvem som får tilgang, og hva de får tilgang til! Les om kommandoene ved å trykke på bildet, eller se videoen!</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Nyttige kommandoer for claim</button>
+            <div class="dropdown-content">
+                <p><b>/claim</b> - Gir deg en gullspade du kan bruke til å claime med.</p>
+                <p><b>/claimlist</b> - Oversikt over koordinater på områder du har claimet.</p>
+                <p><b>/abandonclaim</b> – Fjerner claimen du står i. (OBS! Dette vil ikke være beskyttet lenger)</p>
+                <p><b>/unclaim</b> – Samme som kommandoen over</p>
+                <p><b>/abandonallclaims</b> – Fjerner alle claimene dine.</p>
+                <p><b>/trust</b> [spillernavn] – Gir spilleren tilgang til å bygge i claimen din. Stå utenfor alle claims for å gi tilgang til alle.</p>
+                <p><b>/accesstrust</b> [spillernavn] – Gir spilleren tilgang på knapper, spaker og senger.</p>
+                <p><b>/containertrust</b> [spillernavn] – Gir spilleren tilgang på knapper, spaker, senger, crafting utstyr, kister, shulker boxes og dyr.</p>
+                <p><b>/permissiontrust</b> [spillernavn] – Gir spilleren mulighet til å truste andre spillere på samme nivå som en selv er.</p>
+                <p><b>/trustlist</b> – Liste med hvilke spillere som har tilgang i claimen du står i.</p>
+                <p><b>/untrust</b> [spillernavn] – Fjerner tilgangen spilleren har til å bygge i claimen. Stå utenfor alle claims for å fjerne trust fra alle claims.</p>
+                <p><b>/givepet</b> [spillernavn] – Gir spilleren ditt allerede temmede dyr.</p>
+            </div>
+            <a href="https://www.youtube.com/watch?v=9L7LaaeobVk"><button class="dropdown">Claim tutorial video</button></a>
+        </section>
+
+        <!-- Jobber -->
+        <section>
+            <img src="skjermbilder/2024-06-15_15.00.47.png" alt="jobs">
+            <div class="section-content">
+                <h2>Jobber</h2>
+                <p>Visste du at du kan ta inntil tre jobber her på Rubinen? Velg deg noe du liker å drive med, så tjener du ingame-penger mens du spiller og koser deg.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Nyttige kommandoer for jobber</button>
+            <div class="dropdown-content">
+                <p><b>/jobs browse</b> – Åpner en oversikt over de ulike jobbene vi har på serveren.</p>
+                <p><b>/jobs join</b> [navn på jobben] – Lar deg bli med i den nevnte jobben.</p>
+                <p><b>/jobs leave</b> [navn på jobben] – Lar deg forlate den nevnte jobben.</p>
+                <p><b>/jobs info</b>  – Gir deg informasjon om jobbene.</p>
+                <p><b>/jobs top</b> – Gir deg en oversikt over spillerne med det høyeste nivået i jobbene.</p>
+                <p><b>/jobs limit</b> – Viser hvor lenge det er igjen til du kan tjene penger.</p>
+            </div>
+        </section>
+
+        <!-- Låse kister -->
+        <section>
+            <img src="skjermbilder/2024-06-15_15.03.15.png" alt="lock">
+            <div class="section-content">
+                <h2>Lås kister</h2>
+                <p>Her på Rubinen har vi en måte å forhindre stjeling på, nemlig låste kister. Med dette kan du begrense hvem som kan aksessere kistene dine, og dermed forhindre stjeling fra ukjente medspillere!</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Nyttige kommandoer for låsing av kister</button>
+            <div class="dropdown-content">
+                <p><b>/lock</b> – Låser en kiste/ovn/dører eller lignende for alle spillere.</p>
+                <p><b>/unlock</b> – Åpner en kiste/ovn/dører for alle som har tilgang i claimen.</p>
+                <p><b>/cdonation</b> – Gjør at spillere kan legge inn ting i kista, men ikke ta ut.</p>
+                <p><b>/cpassword</b> [passord] – Lager et passord spillere må taste inn for å åpne kista.</p>
+                <p><b>/cmodify</b> [spillernavn] – Gir spilleren du oppgir, tilgang på tingene dine.</p>
+                <p><b>/cinfo</b> – Informasjon om kisten, døra eller skiltet som er plassert ut.</p>
+                <p><b>/cpersist</b> – Gjør at kommandoen for deling/unlocking/locking vedvarer til du taster inn kommandoen igjen.</p>
+            </div>
+        </section>
+
+        <!-- Handel: Chest-shops, AH, etc. -->
+        <section>
+            <img src="skjermbilder/2024-06-15_15.01.38.png" alt="chestshop">
+            <div class="section-content">
+                <h2>Handel på Rubinen</h2>
+                <p>Kjøp og salg av gjenstander på Rubinen skjer hovedsakelig på to måter, auksjonshuset (ah) eller kistebutikker. Auksjonshuset kan aksesseres og brukes fra hvor som helst, imens kistebutikker er ofte lokalisert og begrenset til warps. Her er litt mer forklaring av hver av de:</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Kistebutikker</button>
+            <div class="dropdown-content">
+                <p>Chest-shops lages ved hjelp av en kiste og et skilt, det står beskrevet hvordan dette fungerer i spawn! Første bygget
+                    til venstre fra "/spawn". Du kan også se et bildet av hvordan det er satt opp på bildet ovenfor.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Auksjonshuset</button>
+            <div class="dropdown-content">
+                <p><b>/ah</b> – Åpner en oversikt over varene til salgs, og dine varer som er ute til salgts. (Her kan du også trekke ting fra ah hvis du ønsker)</p>
+                <p><b>/ah sell</b> [pris] - Legger ut hva du har i hånda til salgs for prisen du valgte.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Andre måter å gjennomføre handel på</button>
+            <div class="dropdown-content">
+                <p><b>Spørre i chat</b> – Man kan komme til enighet om en handel over chat hvis man ønsker</p>
+                <p><b>Handlegata</b> - På Rubinens discord er det en egen chat kun for å gjennomføre handler!</p>
+            </div>
+        </section>
+
+        <!-- Flytimer -->
+        <section>
+            <img src="skjermbilder/2024-06-08_20.16.58.png" alt="fly">
+            <div class="section-content">
+                <h2>Flytimer!</h2>
+                <p>På Rubinen kan alle fly! Med hjelp av tempfly kan spillere fly rundt overalt i oververden, bortsett fra PVP-sonen, dungeons, og avogtil i events. Flyvetiden er begrenset av tempfly balance.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Nyttige kommandoer for tempfly</button>
+            <div class="dropdown-content">
+                <p><b>/tf</b> – Skrur på flymodus</p>
+                <p><b>/tf pay</b> [navn på spiller] [mengde (1h = 1 time, osv.)] – Gir en annen spiller flytid.</p>
+                <p><b>/tf bal</b> – Viser hvor mye flytid du har.</p>
+                <p><b>/tf help</b>  – Viser tempfly-kommandoer.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Hvordan få mer flytid?</button>
+            <div class="dropdown-content">
+                <p><b>Voting</b> – Man får mer flytid med å vote.</p>
+                <p><b>Crates</b> - Man kan få mer flytid i crates.</p>
+                <p><b>Bytte med andre spillere</b> – Andre spillere kan gi deg flytid.</p>
+                <p><b>Kjøpe fra FlyButikk</b> – Kjøpe flytid fra en butikk i spawn.</p>
+            </div>
+        </section>
+
+        <!-- Teleportering: /home, /spawn, etc. -->
+        <section>
+            <img src="skjermbilder/2024-06-16_12.19.39.png" alt="teleport">
+            <div class="section-content">
+                <h2>Teleportering</h2>
+                <p>På Rubinen har vi svært vanlige måter for å flytte oss rundt omkring på mapet raskt, man kan teleportere til steder man velger selv (homes), steder valgt av staben (warps eller spawn), eller tilfeldig steder i verden.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Nyttige kommandoer for teleportering</button>
+            <div class="dropdown-content">
+                <p><b>/home</b> [navn på hjem] - Teleporter til et hjem du har satt tidligere.</p>
+                <p><b>/sethome</b> [navn på hjem] - Sett et hjem du kan teleportere til senere.</p>
+                <p><b>/homes</b> - Lister opp alle hjemmene dine.</p>
+                <p><b>/warp</b> [navn på warp] - Teleporter til en warp.</p>
+                <p><b>/warps</b> - Lister opp alle warps.</p>
+                <p><b>/spawn</b> - Teleporter til spawn.</p>
+                <p><b>/tpa</b> [spillernavn] - Send en forespørsel om å teleportere til en spiller.</p>
+                <p><b>/tpahere</b> [spillernavn] - Send en forespørsel om å teleportere en spiller til deg.</p>
+                <p><b>/reise</b> - Teleportere til et tilfeldig sted på mapet.</p>
+            </div>
+            <button class="dropdown" onclick="toggleDropdown(this)">Hvordan få en warp?</button>
+            <div class="dropdown-content">
+                <p>Man kan få en warp med å søke om det i "be-om-butikkwarp"-chatten på discord!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="rubin_logo">
+            <img class="rubinenBunn" src="bilder/rubinen_logo.png" alt="">
+            <p>Rubinen er ikke tilknyttet eller <br>
+                sponset av Mojang.</p>
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li>
+                    <a class="icon" href="https://www.facebook.com/groups/103693026384900/user/100094883859676/"><i class="fa-brands fa-facebook" ></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://www.youtube.com/channel/UCGAcvQeVEa8k6R14kAoHE3w"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://www.instagram.com/rubinen.no/?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://discord.com/invite/rubinen"><i class="fa-brands fa-discord"></i></a>   
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="dropdown.js"></script>
+</body>
+</html>

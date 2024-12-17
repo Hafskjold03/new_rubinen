@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubinen - Server info</title>
+    <link rel="stylesheet" href="server_info.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="header.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="bilder/rubinen_logo.png" alt="Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="server_info.html">Server Info</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="https://rubinen.craftingstore.net/">Nettbutikk</a></li>
+                <li><a href="om_oss.html">Om oss</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <!-- Regler -->
+    <section>
+        <h1>Regler</h1>
+        <p>På Rubinen oppfører vi oss bra mot hverandre og mot serveren. Det er egentlig alle reglene man trenger! Men det kan være greit med litt mer detaljer enn i Kardemommebyloven, så her kommer det:
+        <br><b>"Man skal ikke plage andre, man skal være snill og grei, men for øvrig kan man gjøre hva man vil!"</b></p>
+        <button class="dropdown" onclick="toggleDropdown(this)">Reklamering for seg selv eller andre</button>
+        <div class="dropdown-content">
+            <p> - Det er lov til å snakke om andre servere, men det er ikke lov til å aktivt forsøke å få spillere over på andre servere</p>
+            <p> - Er du streamer, kjent eller ukjent, kan du gi beskjed om at du streamer. Men ikke spam i chatten. La det helst gå god tid  mellom hver gang, 
+                og unngå og sende meldinger med samme budskap flere ganger selv om du ikke har fått noe respons</p>
+            <p> - Det er lov til å snakke om kule ting som skjer, men ikke aktivt prøve å få med medspillere andre steder</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Utnyttelse av fordeler i spillet, hacks og flere brukere</button>
+        <div class="dropdown-content">
+            <p> - Oppdager du feil eller bugs i spillet, har du ikke lov til å utnytte disse til din egen fordel. Meld fra om feilen til en i stab ingame, eller  
+                meld fra under  ⁠❗hjelp-og-support på Discord</p>
+            <p> - Du har kun lov til å logge på med en bruker. Såkalte alt-brukere er ikke lov</p>
+            <p> - Det er ikke lov til å bruke hacks som for eksempel x-ray eller algoritmer for å mine verdifulle blokker/items. Det er lov til å strip-mine</p>
+            <p> - Det er kun lov til å bruke texture-packs og liknende som ikke gir fordeler i spillet. Det er lov til å bruke Lunar Client, Optifine, Minimap og 
+                likende. Spør oss hvis du er i tvil</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Forhindre lagg på serveren</button>
+        <div class="dropdown-content">
+            <p>For å forhindre lagg på serveren for deg og andre spillere, må vi ha noen begrensninger på hva som er lov og ikke. Av alle reglene på serveren, er 
+                det disse som oftest må endres. Det handler om at vi skal ha det så moro som mulig, men jo flere spillere med mye aktivitet i farms og liknende, 
+                jo mer lagg skapes det.</p>
+
+            <p> - Unngå for mange entities på ett sted, det er dette som skaper mest lagg hos oss nå</p>
+            <p> - Hver spiller kan ha 24 villagers hver, spre dem helst utover så ikke alle står på samme sted</p>
+            <p> - Det er ikke lov til å stå AFK for å holde automatiske prosesser gående. Dette er både for å unngå lagg, og for å unngå å ødelegge serverøkonomien 
+                ved å tjene for mye penger alt for fort</p>
+            <p> - Det er ikke lov til å bruke portaler til farms</p>
+
+            <br>
+            <p><b>Spesielt om XP-farms:</b></p>
+            <p> - Det er ikke lov til å bruke xp-farms når tps er rød</p>
+            <p> - Det skal være av/på-brytere på xp-farms. Hvis det ikke er mulig å lage en slik bryter, er heller ikke farmen lovlig å lage. Det aller beste er om 
+                farmen kan aktiveres med pressureplate eller string – ta gjerne kontakt med noen for å få hjelp!</p>
+            <p> - Tenk over hvor du plasserer xp-farmen. Det kan være lurt å plassere den slik at den ikke aktiveres når du er i basen din eller når folk er i en warp</p>
+
+            <br>
+            <p><b>Spesielt om redstone:</b></p>
+            <p> - Vi har for tiden ingen redstone-lagg, og ønsker å åpne for mer bruk av redstone. Dette kan endres, så start med å bygge litt smått så du ikke må rive/fjerne 
+                mye om det blir utfordringer. Snakk med oss, så finner vi ut av det sammen!</p>
+            <p> - Det er nå lov til å bruke redstoneklokker, men tenk gjerne på at det ikke skal bli ALT for voldsomt</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Oppførsel på serveren</button>
+        <div class="dropdown-content">
+            <p> - Du skal ikke ødelegge eller claime det andre har bygget. Dette gjelder også i nærheten av andres bygg eller claims. Hør gjerne med eier av claimen 
+                eller stab for å se hva som er langt nok unna. Dersom man samarbeider, kan man selvsagt bygge nærme hverandre, store prosjekter og samarbeid er gøy! 
+                En fin hovedregel er at du går minst 64 blokker unna før du bygger noe selv eller endrer på naturen i nærheten av andre</p>
+            <p> - Det er ikke lov å stjele fra andre, selv om du skulle oppdage at det ikke er beskyttet</p>
+            <p> - Unødvendig naturgrief er ikke lov.</p>
+            <p> - Bruk /trash eller kast items i lava eller på kaktus for å kvitte deg med store mengder ting</p>
+            <p> - Det er ikke lov til å bygge upassende byggverk (kjønnsorganer, upassende symboler og liknende)</p>
+            <p> - Det er ikke lov til å selge overprisede varer i /ah, kistebutikk eller direkte til andre spillere med hensikt å svindle andre</p>
+            <p> - Det er ikke lov å tp-kille, eller campe i områder utenfor områder der KeepInventory er slått av med formål om å drepe andre for å skape dårlig stemning</p>
+            <p> - Det er ikke lov med kasino eller liknende gambling-spill på serveren</p>
+            <p><b> - Det er ikke på noen måte greit å bruke andre måter å betale på enn ingame-penger. Ekte penger/varer/tjenester skal ikke blandes med spilets virtuelle økonomi</b></p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Oppførsel i chat (Gjelder også på discord)</button>
+        <div class="dropdown-content">
+            <p> - Det er ikke lov til å krangle med eller motsi stabens avgjørelser. Hvis du er uenig, kan du sende en respektfull personlig melding eller henvende deg til staben på Discord.</p>
+            <p> - Respekter beskjeder fra stab</p>
+            <p> - I chatten oppfører vi oss bra og snakker hyggelig til og om hverandre</p>
+            <p> - Det er ikke lov til å true, baksnakke, hetse eller mobbe andre</p>
+            <p> - Det er ikke lov til å oppfordre til bruk av rusmidler</p>
+            <p> - Diskriminering eller nedsettende snakk om andre er ikke lov. Det er heller ikke lov til å bruke støtende ord om andre personer eller grupper</p>
+            <p> - Det er ikke lov til å fremme tanker som hyller rasisme, nazisme eller andre liknende retninger</p>
+            <p> - Ikke spam i chat. Har du spurt om noe eller sagt noe, og ingen svarer, så vent! Ellers blir du fort sett på som slitsom, og det kan gjøre deg vanskeligere å bli tatt seriøst av medspillere</p>
+            <p> - Det er ikke lov til å lure eller oppfordre andre til regelbrudd</p>
+            <p> - Det er ikke lov til å dele private opplysninger som kan identifisere deg selv eller andre. Fornavn og alder kan deles dersom du får lov av dine foreldre/foresatte. Det er ikke lov til å be om at 
+                andre skal dele opplysninger om seg selv, husk at det er mange forskjellige regler hjemme om dette</p>
+            <p> - Ved bruk av musikkboten på Discordserveren, skal musikken passe uansett alder</p>
+        </div>
+    </section>
+
+    <!-- Generell server info -->
+    <section>
+        <h1>Generell server info</h1>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Vanskelighetsgrad</button>
+        <div class="dropdown-content">
+            <p> - Vanskelighetsgraden på serveren er hard</p>
+            <p> - KeepInventory er slått på</p>
+            <p> - McMMO er også slått av i PvP for å forhindre at enkelte spillere får store fordeler med høyt level i McMMO</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Penger</button>
+        <div class="dropdown-content">
+            <p>Du kan tjene penger på flere måter, og blant annet kan du</p>
+            <p> - Joine inntil tre jobber med /jobs</p>
+            <p> - Lage egne kistebutikker og du kan søke om en warp</p>
+            <p> - Selge ting på auksjonshuset med /ah</p>
+            <p> - Selge poteter og gulrøtter i spawn</p>
+            <p> - Fullføre daglige og ukentlige utfordringer som parkour, dungeons og andre konkurranser på serveren</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Claims</button>
+        <div class="dropdown-content">
+            <p>Jo mer du spiller- jo flere claimblocks får du. Du får 256 claimblocks (en chunk) for hver time du spiller, og du 
+                kan kjøpe flere for 5 ingame-kroner pr. stk.</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Voting</button>
+        <div class="dropdown-content">
+            <p>Voting gir en rekke fordeler og premier, som flytid, kule crate-premier og voteparty hvor det skjer et vote-event. 
+                Fort deg til /warp pinata når det annonseres at det er votingparty, så kan du kanskje klare å få tak i verdifulle items! Her er de forskjellige linkene til voting sidene:</p>
+            <p><a href="https://topminecraftservers.org/vote/33584">https://topminecraftservers.org/vote/33584</a></p>
+            <p><a href="https://minecraftservers.org/vote/651045">https://minecraftservers.org/vote/651045</a></p>
+            <p><a href="https://minecraft-mp.com/server/319778/vote/">https://minecraft-mp.com/server/319778/vote/</a></p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Spilleropplevelse</button>
+        <div class="dropdown-content">
+            <p>Du kan sette inntil 7 homes med ulike navn ved å bruke kommandoen /sethome (navn). Dermed kan du teleportere tilbake med /home (navn)</p>
+            <p>Du kan skru av/på scoreboardet (featherboard) til høyre med kommandoen /fb toggle</p>
+        </div>
+
+        <button class="dropdown" onclick="toggleDropdown(this)">Ranks</button>
+        <div class="dropdown-content">
+            <p>For å få en optimal server-opplevelse burde du bruke server-resourcepacken. Den kan du enten godta inne i spillet når 
+                du logger inn, eller laste ned her:</p>
+            <p> - Du kan kjøpe rank i nettbutikken vår</p>
+            <p> - Per nå tilbyr vi kun 30 dagers ranks (engangskjøp og abonnement), disse gir kun kosmetiske endringer og følger EULA avtalen</p>
+            <p> - For å få rank her på discordserveren skriver du ingame brukernavn og hvilken rank du har kjøpt i ⁠🏅be-om-rank</p>
+        </div>
+
+    </section>
+
+    <!-- Ting å gjøre på rubinen -->
+    <section>
+        <h1>Ting å gjøre på Rubinen</h1>
+        <div class="container">
+            <div class="activity">
+                <img src="dungeon/2024-06-12_22.15.42.png" alt="dungeon">
+                <div class="section-content">
+                    <h2>Dungeons</h2>
+                    <p>Delta i utfordringer designet og utviklet av våre partnere og stabmedlemmer. Kjemp mot custom mobs for varierende premier!</p>
+                </div>
+            </div>
+    
+            <div class="activity">
+                <img src="skjermbilder/2024-06-15_15.11.33.png" alt="pvp">
+                <div class="section-content">
+                    <h2>PVP</h2>
+                    <p>Vi tilbyr også PVP i både Nether og PVP-sonen, hvor man kan arrangere kamper eller utfordre andre spillere, samt 
+                        forbedre sine egne ferdigheter. Keepinventory er alltid på!</p>
+                </div>
+            </div>
+    
+            <div class="activity">
+                <img src="skjermbilder/2024-06-13_12.21.55.png" alt="utforskning">
+                <div class="section-content">
+                    <h2>Utforskning</h2>
+                    <p>Rubinen har mange fantastiske byggverk og byer spredd rundt omkring i verden, så det er bare å starte å utforske!</p>
+                </div>
+            </div>
+    
+            <div class="activity">
+                <img src="dungeon/2024-06-12_22.07.22.png" alt="events">
+                <div class="section-content">
+                    <h2>Events</h2>
+                    <p>Vi på Rubinen prøver å arrangere events så ofte som overhode mulig, disse kan være alt fra gjemte hoder i spawn, til 
+                        events laget av spillere. Disse eventene blir annonsert på discord serveren til Rubinen!</p>
+                </div>
+            </div>
+    
+            <div class="activity">
+                <img src="skjermbilder/2024-06-13_12.05.50.png" alt="bygging">
+                <div class="section-content">
+                    <h2>Bygging</h2>
+                    <p>Rubinen er et perfekt sted for å bygge større prosjekter enten sammen med venner eller alene, disse prosjektene 
+                        kan være alt fra en by til et slott, eller hva du enn vil. Din eneste stopper er kreativiteten!</p>
+                </div>
+            </div>
+    
+            <div class="activity">
+                <img src="skjermbilder/2024-06-08_20.20.22.png" alt="venner">
+                <div class="section-content">
+                    <h2>Få nye venner</h2>
+                    <p>Rubinen er et sosialt fellesskap som handler om å bygge vennskap og relasjoner til andre spillere! Så bare vær deg selv og lag nye relasjoner gjennom gaming <3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="rubin_logo">
+            <img class="rubinenBunn" src="bilder/rubinen_logo.png" alt="">
+            <p>Rubinen er ikke tilknyttet eller <br>
+                sponset av Mojang.</p>
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li>
+                    <a class="icon" href="https://www.facebook.com/groups/103693026384900/user/100094883859676/"><i class="fa-brands fa-facebook" ></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://www.youtube.com/channel/UCGAcvQeVEa8k6R14kAoHE3w"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://www.instagram.com/rubinen.no/?igshid=NzZlODBkYWE4Ng%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a class="icon" href="https://discord.com/invite/rubinen"><i class="fa-brands fa-discord"></i></a>   
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="dropdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #095755;
+}
+
+.article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0d7776;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.summary {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.884);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.author-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.author-name {
+    font-weight: bold;
+}
+
+.article-content {
+    font-size: 1.1em;
+}
+/* Body */
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#343434;
+    padding:20px;
+}
+
+.rubinenBunn{
+    width: 200px;
+}
+
+.icon{
+    color: white;
+    margin: 3px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    padding:7px;
+    border-radius: 20%;
+    
+}
+footer ul li a:hover {
+    color:#0d7776;
+}
