@@ -72,13 +72,13 @@ h2 {
     font-size: 1em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .team-member {
         width: 45%;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 728px) {
     .team-member {
         width: 100%;
     }
